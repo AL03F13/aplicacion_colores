@@ -1,6 +1,11 @@
 // JavaScript Document
 $(document).ready(function(e) {
 document.addEventListener("deviceready",function(){
+	audio=window.plugins.LowLatencyAudio;
+	audio.preloadFX('b1','audio/C.mp3',function(){},function(msg){alert("Error "+msg);});
+	audio.preloadFX('b2','audio/D.mp3',function(){},function(msg){alert("Error "+msg);});
+	audio.preloadFX('b3','audio/E.mp3',function(){},function(msg){alert("Error "+msg);});
+	audio.preloadFX('b4','audio/F.mp3',function(){},function(msg){alert("Error "+msg);});
 	$('#btnjugar').on('tap',function(){
 		var pantalla=$.mobile.getScreenHeight();
 		var encabezado=$('.ui-header').outerHeight();
@@ -24,6 +29,7 @@ document.addEventListener("deviceready",function(){
 		});
 		function quien(q)
 		{
+			audio.play(q);
 			return q.substring(1);
 		}
 		$('.cuadro').on('vmousedown',function(){
