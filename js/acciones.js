@@ -44,11 +44,11 @@ document.addEventListener("deviceready",function(){
 			audio.play(q);
 			return q.substring(1);
 		}
-		$('.cuadro').on('vmousedown',function(){
-			$('#pantalla').append(quien($(this).attr('id')));
-			$(this).addClass('pulsado');
+		//$('.cuadro').on('vmousedown',function(){
+			//$('#pantalla').append(quien($(this).attr('id')));
+			//$(this).addClass('pulsado');
 			
-		});
+		//});
 	$('#btnconfigurar').on('tap',function(){
 		$('#txtnombre').val($('#jugador').text());
 		
