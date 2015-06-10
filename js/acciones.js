@@ -67,6 +67,7 @@ document.addEventListener("deviceready",function(){
 			boton.stop().animate({opacity:'1'},200);
 		}
 		});
+		audio.play(boton.attr('id'));
 	}
 	$('.cuadro').on('tap',function(){
 		flash($(this));
